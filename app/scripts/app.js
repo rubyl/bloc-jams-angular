@@ -4,7 +4,7 @@
             .html5Mode({
                 enabled: true,
                 requireBase:false
-        });
+        })
         
         $stateProvider
             .state('landing', {
@@ -15,6 +15,7 @@
         
         .state('album', {
             url: '/album',
+            controller: "AlbumCtrl as album",
             templateUrl: '/templates/album.html'
         })
         
