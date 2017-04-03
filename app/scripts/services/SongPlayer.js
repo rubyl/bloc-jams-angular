@@ -43,6 +43,12 @@
             song.playing = true;
         }
 
+        
+         /**
+         * @function play
+         * @desc Play current or new song
+         * @param {Object} song
+         */
         SongPlayer.play = function(song) {
             if (currentSong !== song) {
                 setSong(song);
@@ -55,6 +61,11 @@
             }
         };
         
+         /**
+         * @function pause
+         * @desc pause current
+         * @param {Object} song
+         */
         SongPlayer.pause = function(song) {
             currentBuzzObject.pause();
             song.playing = false;
@@ -62,7 +73,7 @@
         return SongPlayer;
  }
     angular
-    .module('blocJams')
-    .factory('SongPlayer', SongPlayer);
+        .module('blocJams')
+        .factory('SongPlayer', SongPlayer);
 })();
 
